@@ -10,6 +10,7 @@ services:
   backend:
     build: ./backend
     environment:
+      SPRING_PROFILES_ACTIVE: docker
       POSTGRES_DB: "${POSTGRES_DB:-lexiscan}"
       POSTGRES_USER: "${POSTGRES_USER:-lexiscan}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}"

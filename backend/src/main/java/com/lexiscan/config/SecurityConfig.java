@@ -41,11 +41,10 @@ public class SecurityConfig {
     CorsConfigurationSource corsConfigurationSource(AppProperties p) {
         var c = new CorsConfiguration();
         if (p.cors() != null && p.cors().allowedOrigins() != null && !p.cors().allowedOrigins().isBlank()) {
-            List<String> origins = Arrays.stream(p.cors().allowedOrigins().split(","))
+            Arrays.stream(p.cors().allowedOrigins().split(","))
                     .map(String::trim)
                     .filter(s -> !s.isEmpty())
-                    .toList();
-            c.setAllowedOrigins(origins);
+                    .forEach(c::addAllowedOriginPattern);
         } else {
             c.setAllowedOrigins(List.of("http://localhost:5173", "http://127.0.0.1:5173"));
         }
