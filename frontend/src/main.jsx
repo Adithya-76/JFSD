@@ -143,7 +143,7 @@ function ThemeToggle({ isDark, onToggle }) {
   );
 }
 
-function Auth() {
+function Auth({ onAuthenticated }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -162,6 +162,7 @@ function Auth() {
       const payload = isRegister ? { name, email, password } : { email, password };
       const res = await api.post(endpoint, payload);
       localStorage.setItem('token', res.data.token);
+      onAuthenticated(res.data.token);
       navigate('/');
     } catch (err) {
       setError(err.response?.data?.message || 'Authentication failed. Please check your credentials.');
@@ -254,6 +255,7 @@ function Auth() {
 }
 
 function App() {
+  const [token, setToken] = useState(() => localStorage.getItem('token'));
   const [currentUser, setCurrentUser] = useState(null);
   const [docs, setDocs] = useState([]);
   const [file, setFile] = useState(null);
@@ -278,7 +280,7 @@ function App() {
       })
       .catch(() => {
         localStorage.removeItem('token');
-        location.reload();
+        setToken(null);
       });
   }
 
@@ -289,13 +291,13 @@ function App() {
   }
 
   useEffect(() => {
-    if (localStorage.getItem('token')) {
+    if (token) {
       fetchUser();
       fetchDocs();
     }
-  }, []);
+  }, [token]);
 
-  if (!localStorage.getItem('token')) return <Auth />;
+  if (!token) return <Auth onAuthenticated={setToken} />;
 
   async function viewAnalysis(doc) {
     setError('');
@@ -452,7 +454,11 @@ function App() {
 
           <button
             className="btn btn-secondary btn-sm"
-            onClick={() => { localStorage.clear(); location.reload(); }}
+            onClick={() => {
+              localStorage.removeItem('token');
+              setToken(null);
+              setCurrentUser(null);
+            }}
           >
             <Icons.LogOut />
             <span>Sign out</span>
