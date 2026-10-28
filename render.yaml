@@ -34,7 +34,7 @@ services:
         fromService:
           type: web
           name: lexiscan-backend
-          property: url
+          property: host
 
 databases:
   - name: lexiscan-db

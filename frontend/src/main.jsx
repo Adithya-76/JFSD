@@ -4,8 +4,13 @@ import { BrowserRouter, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './style.css';
 
+const rawApiUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8081').trim();
+const baseURL = (rawApiUrl.startsWith('http://') || rawApiUrl.startsWith('https://') || rawApiUrl.startsWith('/'))
+  ? rawApiUrl
+  : `https://${rawApiUrl}`;
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8081'
+  baseURL
 });
 
 api.interceptors.request.use(config => {
