@@ -5,9 +5,12 @@ import axios from 'axios';
 import './style.css';
 
 const rawApiUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8081').trim();
-const baseURL = (rawApiUrl.startsWith('http://') || rawApiUrl.startsWith('https://') || rawApiUrl.startsWith('/'))
+const normalizedApiUrl = rawApiUrl.includes('.') || rawApiUrl.includes(':')
   ? rawApiUrl
-  : `https://${rawApiUrl}`;
+  : `${rawApiUrl}.onrender.com`;
+const baseURL = (normalizedApiUrl.startsWith('http://') || normalizedApiUrl.startsWith('https://') || normalizedApiUrl.startsWith('/'))
+  ? normalizedApiUrl
+  : `https://${normalizedApiUrl}`;
 
 const api = axios.create({
   baseURL
