@@ -1,0 +1,1 @@
+package com.lexiscan.extraction; import org.apache.pdfbox.Loader; import org.apache.pdfbox.text.PDFTextStripper; import org.springframework.stereotype.Component; import java.nio.file.*; @Component public class PdfTextExtractor implements TextExtractor {public String extract(Path p)throws Exception{try(var d=Loader.loadPDF(p.toFile())){return new PDFTextStripper().getText(d);}}}

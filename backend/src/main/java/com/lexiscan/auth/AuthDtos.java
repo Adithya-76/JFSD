@@ -1,0 +1,2 @@
+package com.lexiscan.auth; import com.lexiscan.user.Role; import jakarta.validation.constraints.*; import java.util.*;
+public final class AuthDtos { private AuthDtos(){} public record RegisterRequest(@NotBlank @Size(max=120) String name,@Email String email,@NotBlank @Size(min=8,max=128) String password){} public record LoginRequest(@Email String email,@NotBlank String password){} public record UserResponse(UUID id,String name,String email,Role role,boolean enabled){} public record AuthResponse(String token,UserResponse user){} }

@@ -1,0 +1,1 @@
+package com.lexiscan.nlp; import java.util.*; public record AnalysisOutput(String summary,int overallRiskScore,String overallRiskLevel,Map<String,Object> entities,List<ClauseOutput> clauses) { public record ClauseOutput(int index,String text,String category,String riskLevel,int riskScore,String riskReason){} }

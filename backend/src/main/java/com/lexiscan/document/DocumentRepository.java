@@ -1,0 +1,1 @@
+package com.lexiscan.document; import org.springframework.data.domain.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface DocumentRepository extends JpaRepository<Document,UUID>{Page<Document> findByUserId(UUID userId,Pageable p); long countByUserId(UUID id); long countByStatus(DocumentStatus status);}

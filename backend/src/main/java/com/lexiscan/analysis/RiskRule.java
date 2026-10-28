@@ -1,0 +1,2 @@
+package com.lexiscan.analysis; import jakarta.persistence.*; import lombok.*; import java.util.*;
+@Entity @Table(name="risk_rules") @Getter @Setter @NoArgsConstructor public class RiskRule { @Id private UUID id=UUID.randomUUID(); private String name; private String category; @Column(name="pattern") private String pattern; @Column(name="risk_level") private String riskLevel; private int weight; private String explanation; private boolean active=true; }
