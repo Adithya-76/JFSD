@@ -8,6 +8,19 @@ LexiScan is a Java 17/Spring Boot and React application that turns PDF or DOCX c
 2. `docker compose up --build -d`
 3. Open `http://localhost:5173` for the frontend; API docs & Swagger UI are at `http://localhost:8081/swagger-ui.html`.
 
+The initial administrator is created only when both `ADMIN_EMAIL` and
+`ADMIN_PASSWORD` are configured before the backend starts. The default local
+credentials from `.env.example` are `admin@lexiscan.local` and
+`ChangeThisAdminPassword123!`; change the password for any real deployment.
+If the database already contains that email as a regular user, use a new
+administrator email or remove that user before restarting so the seeder can
+create the administrator account.
+
+For Render, set the prompted `ADMIN_PASSWORD` secret when creating/updating
+the blueprint. The `ADMIN_EMAIL` is `admin@lexiscan.local` by default in
+`render.yaml`. After setting the secret, redeploy the backend; the account is
+seeded on startup. Admin login uses the same login form as regular users.
+
 The current environment has Docker installed but its daemon was not running during validation. Maven is also absent locally; Docker builds the Maven project in a container.
 
 ## Architecture

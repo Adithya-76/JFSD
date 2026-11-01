@@ -477,26 +477,26 @@ function App() {
 
         {/* Admin Stats Overview if ADMIN */}
         {adminStats && (
-          <div className="card" style={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', color: 'white', border: '1px solid #334155' }}>
+          <div className="card" style={{ background: 'linear-gradient(135deg, var(--bg-card) 0%, var(--bg-main) 100%)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
-                <h3 style={{ fontSize: '0.85rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Administrator Dashboard</h3>
+                <h3 style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Administrator Dashboard</h3>
                 <h2 style={{ fontSize: '1.35rem', fontWeight: 700, marginTop: '4px' }}>System Overview</h2>
               </div>
-              <span className="brand-tag" style={{ background: '#334155', color: '#38bdf8', borderColor: '#475569' }}>Admin Privileges Active</span>
+              <span className="brand-tag" style={{ background: 'var(--primary-light)', color: 'var(--primary)', borderColor: 'var(--primary-border)' }}>Admin Privileges Active</span>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginTop: '1.25rem' }}>
-              <div style={{ background: '#0f172a', padding: '14px', borderRadius: '8px', border: '1px solid #334155' }}>
-                <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>Total Registered Users</span>
-                <p style={{ fontSize: '1.6rem', fontWeight: 800, color: '#38bdf8' }}>{adminStats.totalUsers}</p>
+              <div style={{ background: 'var(--bg-main)', padding: '14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Total Registered Users</span>
+                <p style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--primary)' }}>{adminStats.totalUsers}</p>
               </div>
-              <div style={{ background: '#0f172a', padding: '14px', borderRadius: '8px', border: '1px solid #334155' }}>
-                <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>Total Uploaded Documents</span>
-                <p style={{ fontSize: '1.6rem', fontWeight: 800, color: '#a78bfa' }}>{adminStats.totalDocuments}</p>
+              <div style={{ background: 'var(--bg-main)', padding: '14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Total Uploaded Documents</span>
+                <p style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--accent-cyan)' }}>{adminStats.totalDocuments}</p>
               </div>
-              <div style={{ background: '#0f172a', padding: '14px', borderRadius: '8px', border: '1px solid #334155' }}>
-                <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>Completed Analyses</span>
-                <p style={{ fontSize: '1.6rem', fontWeight: 800, color: '#4ade80' }}>{adminStats.analyses}</p>
+              <div style={{ background: 'var(--bg-main)', padding: '14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Completed Analyses</span>
+                <p style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--risk-low-accent)' }}>{adminStats.analyses}</p>
               </div>
             </div>
           </div>

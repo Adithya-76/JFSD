@@ -17,6 +17,10 @@ services:
         value: "*"
       - key: STORAGE_DIR
         value: /tmp/uploads
+      - key: ADMIN_EMAIL
+        value: admin@lexiscan.local
+      - key: ADMIN_PASSWORD
+        sync: false
 
   - type: web
     name: lexiscan-frontend

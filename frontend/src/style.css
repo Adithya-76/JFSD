@@ -2,60 +2,59 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
-  /* Calm & Cold Palette - Light Mode */
-  --bg-main: #f0f4f8;
-  --bg-card: #ffffff;
-  --bg-subtle: #f8fafc;
-  --bg-hover: #e2e8f0;
-  
-  --text-main: #0f233a;
-  --text-muted: #475569;
-  --text-subtle: #94a3b8;
-  
-  --primary: #0284c7;
-  --primary-hover: #0369a1;
-  --primary-light: #f0f9ff;
-  --primary-border: #bae6fd;
+  /* Imperial Midnight Palette - Light Mode */
+  --bg-main: #f4f0e7;
+  --bg-card: #fffdf8;
+  --bg-subtle: #eee8dc;
+  --bg-hover: #e3dacb;
+
+  --text-main: #172033;
+  --text-muted: #596273;
+  --text-subtle: #8d96a5;
+
+  --primary: #9a761b;
+  --primary-hover: #795b12;
+  --primary-light: #f5ecd0;
+  --primary-border: #d7bd70;
   --primary-text: #ffffff;
 
-  --accent-cyan: #0d9488;
-  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
-  
-  /* Calm, Soft Muted Risk Tones */
-  --risk-high-text: #9f1239;
-  --risk-high-bg: #fff1f2;
-  --risk-high-border: #fecdd3;
-  --risk-high-accent: #e11d48;
-  
-  --risk-med-text: #854d0e;
-  --risk-med-bg: #fefce8;
-  --risk-med-border: #fef08a;
-  --risk-med-accent: #d97706;
-  
-  --risk-low-text: #0f766e;
-  --risk-low-bg: #f0fdfa;
-  --risk-low-border: #99f6e4;
-  --risk-low-accent: #0d9488;
-  
-  --border-color: #dbe4ee;
-  --banner-bg: #f0f9ff;
-  --banner-border: #bae6fd;
-  --banner-text: #0369a1;
+  --accent-cyan: #287c78;
+  --accent-gradient: linear-gradient(135deg, #d4af37 0%, #9a761b 48%, #172554 100%);
 
-  --nav-bg: rgba(255, 255, 255, 0.88);
-  --dropzone-bg: #f8fafc;
-  --dropzone-border: #cbd5e1;
-  --input-bg: #fdfdfd;
-  --input-text: #0f233a;
-  --table-hover: #f8fafc;
+  --risk-high-text: #9f2940;
+  --risk-high-bg: #fbe9eb;
+  --risk-high-border: #e9aeb7;
+  --risk-high-accent: #c64055;
 
-  --auth-bg: radial-gradient(circle at top left, #e0f2fe 0%, #f0f4f8 100%);
-  --modal-overlay: rgba(15, 35, 58, 0.5);
+  --risk-med-text: #8a5a0a;
+  --risk-med-bg: #fff4d8;
+  --risk-med-border: #ead18a;
+  --risk-med-accent: #c58a16;
 
-  --shadow-sm: 0 1px 3px 0 rgba(15, 35, 58, 0.04);
-  --shadow-md: 0 4px 8px -1px rgba(15, 35, 58, 0.06), 0 2px 4px -2px rgba(15, 35, 58, 0.04);
-  --shadow-lg: 0 12px 28px -4px rgba(15, 35, 58, 0.08), 0 4px 8px -4px rgba(15, 35, 58, 0.03);
-  --shadow-glow: 0 0 25px rgba(2, 132, 199, 0.15);
+  --risk-low-text: #146b5d;
+  --risk-low-bg: #e4f3ed;
+  --risk-low-border: #9bcdbd;
+  --risk-low-accent: #238a72;
+
+  --border-color: #d8cfbf;
+  --banner-bg: #edf2f8;
+  --banner-border: #b8c8dc;
+  --banner-text: #24466f;
+
+  --nav-bg: rgba(255, 253, 248, 0.9);
+  --dropzone-bg: #faf7f0;
+  --dropzone-border: #cfc4b2;
+  --input-bg: #fffefa;
+  --input-text: #172033;
+  --table-hover: #f7f2e9;
+
+  --auth-bg: radial-gradient(circle at top left, #e9dfc5 0%, #f4f0e7 56%, #dfe7f1 100%);
+  --modal-overlay: rgba(23, 32, 51, 0.55);
+
+  --shadow-sm: 0 1px 3px 0 rgba(23, 32, 51, 0.06);
+  --shadow-md: 0 4px 8px -1px rgba(23, 32, 51, 0.08), 0 2px 4px -2px rgba(23, 32, 51, 0.05);
+  --shadow-lg: 0 12px 28px -4px rgba(23, 32, 51, 0.12), 0 4px 8px -4px rgba(23, 32, 51, 0.05);
+  --shadow-glow: 0 0 25px rgba(212, 175, 55, 0.2);
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -63,58 +62,59 @@
 }
 
 [data-theme="dark"] {
-  /* Calm & Cold Palette - Dark Mode: Midnight Glacier & Obsidian Slate */
-  --bg-main: #0b111e;
-  --bg-card: #131c2e;
-  --bg-subtle: #0f172a;
-  --bg-hover: #1e293b;
-  
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-  --text-subtle: #64748b;
-  
-  --primary: #38bdf8;
-  --primary-hover: #0ea5e9;
-  --primary-light: #0c2a47;
-  --primary-border: #0369a1;
-  --primary-text: #0b111e;
+  /* Imperial Midnight Palette - Dark Mode */
+  --bg-main: #0c1222;
+  --bg-card: #141d35;
+  --bg-subtle: #10182b;
+  --bg-hover: #202e50;
 
-  --accent-cyan: #2dd4bf;
-  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 100%);
-  
-  --risk-high-text: #fecdd3;
-  --risk-high-bg: #350f1a;
-  --risk-high-border: #881337;
-  --risk-high-accent: #fb7185;
-  
-  --risk-med-text: #fef08a;
-  --risk-med-bg: #372007;
-  --risk-med-border: #78350f;
-  --risk-med-accent: #fbbf24;
-  
-  --risk-low-text: #99f6e4;
-  --risk-low-bg: #042f2e;
-  --risk-low-border: #134e4a;
-  --risk-low-accent: #2dd4bf;
-  
-  --border-color: #223049;
-  --banner-bg: #0c253d;
-  --banner-border: #15456f;
-  --banner-text: #7dd3fc;
+  --text-main: #f8f3e8;
+  --text-muted: #b8c1d1;
+  --text-subtle: #7e8ba3;
 
-  --nav-bg: rgba(19, 28, 46, 0.88);
-  --dropzone-bg: #0f1828;
-  --dropzone-border: #263650;
-  --input-bg: #0c1422;
-  --input-text: #f1f5f9;
-  --table-hover: #172338;
+  --primary: #e2bd55;
+  --primary-hover: #f0cf75;
+  --primary-light: #332b17;
+  --primary-border: #866c22;
+  --primary-text: #151a29;
 
-  --auth-bg: radial-gradient(circle at top left, #12223a 0%, #0b111e 100%);
+  --accent-cyan: #6ed0c0;
+  --accent-gradient: linear-gradient(135deg, #e2bd55 0%, #c9972e 48%, #6d8bc0 100%);
+
+  --risk-high-text: #ffb5bd;
+  --risk-high-bg: #3a1723;
+  --risk-high-border: #873449;
+  --risk-high-accent: #ef6c7d;
+
+  --risk-med-text: #ffe09a;
+  --risk-med-bg: #3b2b0d;
+  --risk-med-border: #80621b;
+  --risk-med-accent: #e5b63f;
+
+  --risk-low-text: #a1e4d1;
+  --risk-low-bg: #0d342e;
+  --risk-low-border: #1e6657;
+  --risk-low-accent: #51c5a5;
+
+  --border-color: #2d3b5d;
+  --banner-bg: #172c4a;
+  --banner-border: #365b86;
+  --banner-text: #b5d2f3;
+
+  --nav-bg: rgba(20, 29, 53, 0.9);
+  --dropzone-bg: #111b31;
+  --dropzone-border: #3b4b6c;
+  --input-bg: #0f1729;
+  --input-text: #f8f3e8;
+  --table-hover: #1a2846;
+
+  --auth-bg: radial-gradient(circle at top left, #26385d 0%, #0c1222 62%);
   --modal-overlay: rgba(0, 0, 0, 0.7);
 
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.5), 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 28px rgba(226, 189, 85, 0.18);
 }
 
 * {
@@ -172,7 +172,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  box-shadow: var(--shadow-glow);
 }
 
 .brand-text h1 {
