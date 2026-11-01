@@ -14,7 +14,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: CORS_ALLOWED_ORIGINS
-        value: "*"
+        value: https://lexiscan-frontend.onrender.com
       - key: STORAGE_DIR
         value: /tmp/uploads
       - key: ADMIN_EMAIL
